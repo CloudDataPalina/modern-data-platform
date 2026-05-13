@@ -163,7 +163,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 ## 📷 Dashboard Previews
 
 ### IBM Cognos Analytics – Executive Overview
-**[View Dashboard PDF]**(cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)
+[View Dashboard PDF](cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)
 
 ![Cognos Overview](cognos/screenshots/cognos_dashboard_overview.png)
 
@@ -176,7 +176,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 ---
 
 ### Google Looker Studio – Executive Overview
-**[View Dashboard PDF]**(looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)
+[View Dashboard PDF](looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)
 
 ![Looker Overview](looker_studio/screenshots/looker_dashboard_overview.png)
 
