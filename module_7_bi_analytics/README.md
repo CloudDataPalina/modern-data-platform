@@ -160,24 +160,10 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 
 ---
 
-## 📸 Screenshots & Dashboard Views
-
-### IBM Cognos Analytics
-- [`cognos_dashboard_overview.png`](cognos/screenshots/cognos_dashboard_overview.png) – Executive KPI dashboard overview
-- [`cognos_regional_analysis.png`](cognos/screenshots/cognos_regional_analysis.png) – Regional sales and quarterly revenue analysis
-- [`cognos_geographic_insights.png`](cognos/screenshots/cognos_geographic_insights.png) – Geographic revenue distribution and treemap analytics
-
-### Google Looker Studio
-- [`looker_dashboard_overview.png`](looker_studio/screenshots/looker_dashboard_overview.png) – Executive KPI dashboard overview
-- [`looker_regional_analysis.png`](looker_studio/screenshots/looker_regional_analysis.png) – Regional sales and quarterly revenue analysis
-- [`looker_geographic_insights.png`](looker_studio/screenshots/looker_geographic_insights.png) – Geographic revenue distribution and treemap analytics
-
----
-
 ## 📷 Dashboard Previews
 
 ### IBM Cognos Analytics – Executive Overview
-**[View Dashboard PDF](cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)**
+**[View Dashboard PDF]**(cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)
 
 ![Cognos Overview](cognos/screenshots/cognos_dashboard_overview.png)
 
@@ -190,7 +176,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 ---
 
 ### Google Looker Studio – Executive Overview
-**[View Dashboard PDF](looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)**
+**[View Dashboard PDF]**(looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)
 
 ![Looker Overview](looker_studio/screenshots/looker_dashboard_overview.png)
 
