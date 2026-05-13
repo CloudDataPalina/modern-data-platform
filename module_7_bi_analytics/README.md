@@ -36,7 +36,7 @@ The BI layer was built on top of the PostgreSQL Data Warehouse developed in Modu
 
 The workflow included:
 - dimensional modeling in PostgreSQL
-- relationship validation in pgAdmin
+- validation of dimensional relationships in pgAdmin
 - dashboard development in IBM Cognos Analytics
 - blended data modeling in Google Looker Studio
 - executive reporting and PDF export
@@ -132,7 +132,9 @@ IBM Cognos Analytics was used to create enterprise-style executive dashboards wi
 ### Included Files
 - [`Global_Sales_Insights_Dashboard.pdf`](cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)
 - [`cognos_relationships.png`](cognos/screenshots/cognos_relationships.png)
-- [`cognos_dashboard.png`](cognos/screenshots/cognos_dashboard.png)
+- [`cognos_dashboard_overview.png`](cognos/screenshots/cognos_dashboard_overview.png)
+- [`cognos_regional_analysis.png`](cognos/screenshots/cognos_regional_analysis.png)
+- [`cognos_geographic_insights.png`](cognos/screenshots/cognos_geographic_insights.png)
 
 ---
 
@@ -152,33 +154,51 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 - [`Global_Sales_Insights_Dashboard.pdf`](looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)
 - [`looker_blend_data.png`](looker_studio/screenshots/looker_blend_data.png)
 - [`looker_join_configuration.png`](looker_studio/screenshots/looker_join_configuration.png)
-- [`looker_dashboard.png`](looker_studio/screenshots/looker_dashboard.png)
+- [`looker_dashboard_overview.png`](looker_studio/screenshots/looker_dashboard_overview.png)
+- [`looker_regional_analysis.png`](looker_studio/screenshots/looker_regional_analysis.png)
+- [`looker_geographic_insights.png`](looker_studio/screenshots/looker_geographic_insights.png)
 
 ---
 
-## 📸 Screenshots
-
-This module includes screenshots demonstrating:
-
-### Data Modeling
-- [`relationships.png`](data_model/relationships.png) – PostgreSQL star schema relationships
-- [`cognos_relationships.png`](cognos/screenshots/cognos_relationships.png) – Cognos relationship modeling
-- [`looker_blend_data.png`](looker_studio/screenshots/looker_blend_data.png) – Looker Studio blended datasets
-- [`looker_join_configuration.png`](looker_studio/screenshots/looker_join_configuration.png) – Join configuration setup
-
-### Dashboards
-- [`cognos_dashboard.png`](cognos/screenshots/cognos_dashboard.png) – IBM Cognos executive dashboard
-- [`looker_dashboard.png`](looker_studio/screenshots/looker_dashboard.png) – Google Looker Studio dashboard
-
----
-
-## 📷 Dashboard Preview
+## 📸 Screenshots & Dashboard Views
 
 ### IBM Cognos Analytics
-![Cognos Dashboard](cognos/screenshots/cognos_dashboard.png)
+- [`cognos_dashboard_overview.png`](cognos/screenshots/cognos_dashboard_overview.png) – Executive KPI dashboard overview
+- [`cognos_regional_analysis.png`](cognos/screenshots/cognos_regional_analysis.png) – Regional sales and quarterly revenue analysis
+- [`cognos_geographic_insights.png`](cognos/screenshots/cognos_geographic_insights.png) – Geographic revenue distribution and treemap analytics
 
 ### Google Looker Studio
-![Looker Dashboard](looker_studio/screenshots/looker_dashboard.png)
+- [`looker_dashboard_overview.png`](looker_studio/screenshots/looker_dashboard_overview.png) – Executive KPI dashboard overview
+- [`looker_regional_analysis.png`](looker_studio/screenshots/looker_regional_analysis.png) – Regional sales and quarterly revenue analysis
+- [`looker_geographic_insights.png`](looker_studio/screenshots/looker_geographic_insights.png) – Geographic revenue distribution and treemap analytics
+
+---
+
+## 📷 Dashboard Previews
+
+### IBM Cognos Analytics – Executive Overview
+**[View Dashboard PDF](cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)**
+
+![Cognos Overview](cognos/screenshots/cognos_dashboard_overview.png)
+
+### IBM Cognos Analytics – Regional Analysis
+![Cognos Regional](cognos/screenshots/cognos_regional_analysis.png)
+
+### IBM Cognos Analytics – Geographic Insights
+![Cognos Geographic](cognos/screenshots/cognos_geographic_insights.png)
+
+---
+
+### Google Looker Studio – Executive Overview
+**[View Dashboard PDF](looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)**
+
+![Looker Overview](looker_studio/screenshots/looker_dashboard_overview.png)
+
+### Google Looker Studio – Regional Analysis
+![Looker Regional](looker_studio/screenshots/looker_regional_analysis.png)
+
+### Google Looker Studio – Geographic Insights
+![Looker Geographic](looker_studio/screenshots/looker_geographic_insights.png)
 
 ---
 
@@ -199,6 +219,6 @@ This module includes screenshots demonstrating:
 - Enterprise-style executive BI dashboards successfully developed
 - PostgreSQL dimensional warehouse integrated with BI platforms
 - Star schema relationships implemented and validated
-- Executive KPI reporting created
+- Interactive executive KPI reporting created
 - Geographic and revenue analytics visualized
-- Cross-platform Business Intelligence and analytical reporting capabilities demonstrated
+- Cross-platform Business Intelligence architecture and executive analytics capabilities demonstrated
