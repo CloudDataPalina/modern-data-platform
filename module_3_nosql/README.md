@@ -110,23 +110,25 @@ exported 438 records
 
 This module includes screenshots demonstrating:
 
-- JSON data import into MongoDB
-- Database and collection validation
-- Index creation
-- Analytical query execution
-- CSV export operations
+- [importdata.png](screenshots/importdata.png) – JSON data import into MongoDB
+- [database_validation.png](screenshots/database_validation.png) – database and collection validation
+- [createindex.png](screenshots/createindex.png) – index creation on the `type` field
+- [analytical_queries.png](screenshots/analytical_queries.png) – aggregation and analytical queries
+- [exportcsv.png](screenshots/exportcsv.png) – CSV export operation
+- [electronicscsv.png](screenshots/electronicscsv.png) – exported CSV verification
 
 Screenshots are available in the screenshots/ directory.
 
 
 ## ▶ Execution Order
 
-1. Download catalog.json
-2. Import JSON data using mongoimport
-3. Validate databases and collections
-4. Create index on the type field
-5. Execute analytical queries
-6. Export selected fields into CSV format
+1. Download [`catalog.json`](data/catalog.json)
+2. Execute [`import_data.sh`](scripts/import_data.sh) to import JSON data into MongoDB
+3. Validate databases and collections using [`queries.js`](scripts/queries.js)
+4. Create an index on the `type` field
+5. Execute aggregation and analytical queries
+6. Run [`export_data.sh`](scripts/export_data.sh) to export selected fields into CSV format
+7. Verify exported [`electronics.csv`](exports/electronics.csv)
    
 
 ## ✅ Module Outcome
