@@ -1,4 +1,4 @@
-# DBA Capstone Project – End-to-End Relational Data Platform
+# Modern Data Platform – End-to-End Data Engineering Project
 
 ![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql&logoColor=white)
@@ -6,22 +6,25 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-Shell_Scripts-121011?logo=gnu-bash&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green?logo=mongodb&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache-Spark-orange?logo=apachespark&logoColor=white)
+![Looker Studio](https://img.shields.io/badge/Google-Looker_Studio-orange?logo=googleanalytics&logoColor=white)
+
 
 ## ✅ Project Status
-Completed as part of the IBM Relational Database Administrator Professional Certificate.  
-Demonstrates end-to-end relational database administration in an enterprise e-commerce scenario.
+Originally developed as part of the IBM Relational Database Administrator Professional Certificate and continuously expanded into a modern end-to-end data platform portfolio project.
 
 ## 📌 Project Overview
-This project is a **capstone project** completed as part of the **IBM Relational Database Administrator Professional Certificate**.
+This project is a modern enterprise-style data platform designed for a growing e-commerce company.
 
-The goal of the project is to design, implement, and administer a **complete data platform** for a growing **e-commerce company**, covering the full lifecycle of relational data management — from OLTP systems to data warehousing, ETL pipelines, security, and optimization.
+Originally started as a capstone project for the IBM Relational Database Administrator Professional Certificate, the repository has been continuously expanded into a comprehensive Data Engineering portfolio project covering relational databases, NoSQL systems, ETL orchestration, analytics, automation, security, and Big Data technologies.
 
-The project simulates a real-world enterprise environment and demonstrates practical **Database Administrator (DBA)** and **Data Engineering** skills.
+The project demonstrates the full lifecycle of modern data platform engineering — from transactional OLTP systems and Data Warehousing to ETL pipelines, semi-structured data repositories, workflow orchestration, BI analytics, and distributed data processing.
 
 ---
 
 ## 🏗️ Business Scenario
-You are a **Database Administrator** at an e-commerce company responsible for building a reliable, scalable, and secure data platform.
+You are a Data Engineer responsible for building a reliable, scalable, and secure modern data platform for an e-commerce company.
 
 Your responsibilities include:
 - Designing OLTP databases for transactional workloads
@@ -34,27 +37,32 @@ Your responsibilities include:
 ---
 
 ## 🧠 Project Architecture
-The platform follows a **hybrid OLTP + Data Warehouse architecture**
+The platform follows a modern multi-layer data platform architecture
 
-- **OLTP Database:** MySQL  
-- **Staging & Data Warehouse:** PostgreSQL  
-- **ETL & Orchestration:** Apache Airflow  
-- **Automation & Scripting:** Bash, Python  
+- **OLTP Database**: MySQL
+- **Data Warehouse**: PostgreSQL
+- **NoSQL Repository**: MongoDB
+- **ETL & Orchestration**: Apache Airflow
+- **Big Data Processing**: Apache Spark
+- **BI & Reporting**: Cognos Analytics / Looker Studio
+- **Automation & Scripting**: Bash, Python 
 
-Transactional data is stored in MySQL and periodically extracted, transformed, and loaded into a PostgreSQL-based data warehouse using automated Airflow DAGs.
+Transactional and semi-structured data is processed across multiple layers of the platform, including OLTP databases, NoSQL repositories, ETL pipelines, analytical warehouses, and distributed processing components.
 
 ---
 
 ## 📁 Repository Structure
 ```
-dba-capstone-project/
+modern-data-platform/
 │
 ├── module_1_oltp/                       → OLTP database design, transactional schema, indexing, data export
 ├── module_2_data_warehouse/             → Data warehouse design, fact & dimension tables, analytical queries
-├── module_3_etl_airflow/                → ETL pipelines and workflow orchestration using Apache Airflow
-├── module_4_backup_restore/             → Database backup, restore, automation, and disaster recovery
-├── module_5_security_optimization/      → Query optimization, access control, encryption, and performance tuning
-│
+├── module_3_nosql/                      → NoSQL document databases, aggregation queries, indexing, and JSON data processing
+├── module_4_etl_airflow/                → ETL pipelines and workflow orchestration using Apache Airflow
+├── module_5_backup_restore/             → Database backup, restore, automation, and disaster recovery
+├── module_6_security_optimization/      → Query optimization, access control, encryption, and performance tuning
+├── module_7_bi_analytics/               → Business Intelligence dashboards and analytical reporting
+├── module_8_big_data_spark/             → Distributed data processing and Spark analytics
 └── docs/
     └── architecture.md                  → High-level system and data architecture documentation
 
@@ -69,7 +77,11 @@ dba-capstone-project/
 - **Bash** – Automation scripts (backup, export)  
 - **phpMyAdmin / pgAdmin** – Database administration  
 - **Cloud IDE** – Development and testing environment  
-
+- **MongoDB** – NoSQL document database
+- **Apache Spark** – Distributed data processing
+- **IBM Cognos Analytics** – Business Intelligence dashboards
+- **Google Looker Studio** – Data visualization & reporting
+  
 ---
 
 ## 📦 Project Modules
@@ -90,26 +102,45 @@ dba-capstone-project/
 
 ---
 
-### [Module 3 – ETL Pipelines with Apache Airflow](module_3_etl_airflow/)
+### [Module 3 – NoSQL Data Repository](module_3_nosql/)
+- Implemented a NoSQL document database using MongoDB
+- Imported and managed semi-structured JSON data
+- Performed aggregation queries and analytical operations
+- Created indexes for query optimization
+- Exported document data into CSV format using mongoexport
+
+---
+
+### [Module 4 – ETL Pipelines with Apache Airflow](module_4_etl_airflow/)
 - Built ETL pipelines for data extraction, transformation, and loading
 - Automated workflows using Apache Airflow DAGs
 - Ensured reliable and repeatable data integration processes
 
 ---
 
-### [Module 4 – Backup, Restore & Automation](module_4_backup_restore/)
+### [Module 5 – Backup, Restore & Automation](module_5_backup_restore/)
 - Implemented database backup and restore strategies
 - Simulated data loss scenarios
 - Automated backup and recovery operations using Bash and CRON
 
 ---
 
-### [Module 5 – Database Optimization & Security](module_5_security_optimization/)
+### [Module 6 – Database Optimization & Security](module_6_security_optimization/)
 - Optimized SQL queries using indexes and execution plans
 - Managed user roles and access permissions
 - Implemented data encryption and column-level security
 - Improved memory usage and query execution efficiency
 
+---
+
+### [Module 7 – BI Analytics](module_7_bi_analytics/)
+- Coming soon
+
+---
+
+### [Module 8 – Big Data Processing with Spark](module_8_big_data_spark/)
+- Coming soon
+  
 ---
 
 ## 🎯 Key Skills Demonstrated
@@ -119,13 +150,18 @@ dba-capstone-project/
 - ETL pipeline development
 - Workflow orchestration with Apache Airflow
 - Backup, recovery, and security best practices
-
+- NoSQL document database operations
+- Data Warehouse dimensional modeling
+- BI dashboard development
+- Distributed data processing with Spark
+- Data platform architecture design
+  
 ---
 
 ## 📜 Certificate Program
 This project was completed as part of the:
 
-**IBM Relational Database Administrator Professional Certificate**
+**IBM Data Engineer Professional Certificate**
 
 ## 👩‍💻 Author
 
