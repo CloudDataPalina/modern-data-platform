@@ -1,4 +1,4 @@
-# Module 3 – ETL Pipelines & Workflow Orchestration
+# Module 4 – ETL Pipelines & Workflow Orchestration
 
 ## 📌 Module Overview
 This module focuses on **ETL processes and data pipeline orchestration**.
