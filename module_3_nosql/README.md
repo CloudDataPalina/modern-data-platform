@@ -23,16 +23,27 @@ The module covers JSON data ingestion, collection management, indexing, analytic
 ## 📁 Module Structure
 ```text
 module_3_nosql/
-├── README.md
+├── README.md                       → Module documentation and workflow explanation
+│
 ├── data/
-│   └── catalog.json
+│   └── catalog.json                → Source JSON catalog dataset
+│
 ├── scripts/
-│   ├── import_data.sh
-│   ├── queries.js
-│   └── export_data.sh
+│   ├── import_data.sh              → MongoDB import automation script
+│   ├── queries.js                  → Analytical and aggregation queries
+│   └── export_data.sh              → CSV export automation script
+│
 ├── exports/
-│   └── electronics.csv
+│   └── electronics.csv             → Exported MongoDB collection data
+│
 └── screenshots/
+    ├── importdata.png             → JSON data import into MongoDB
+    ├── database_validation.png    → Database and collection validation
+    ├── createindex.png            → Index creation on the type field
+    ├── analytical_queries.png     → Aggregation and analytical query execution
+    ├── exportcsv.png              → CSV export operation
+    └── electronicscsv.png         → Exported CSV verification
+
 ```
 
 ## 📥 Data Import
@@ -52,14 +63,14 @@ show dbs
 use catalog
 show collections
 ```
-The MongoDB server contained the catalog database and the electronics collection after import.
+The MongoDB server successfully contained the `catalog` database and the `electronics` collection after the import process.
 
 
 ## ⚡ Index Creation
 ```javascript
 db.electronics.createIndex({ type: 1 })
 ```
-An index was created on the type field to support faster filtering by product category.
+An index was created on the `type` field to improve query performance and filtering operations by product category.
 
 
 ## 🔎 Analytical Queries
@@ -96,6 +107,7 @@ db.electronics.aggregate([
 ```
 
 ## 📤 CSV Export
+The selected fields were exported from MongoDB into CSV format using `mongoexport`.
 
 ```bash
 mongoexport --db catalog --collection electronics --type=csv --fields _id,type,model --out electronics.csv
@@ -111,11 +123,11 @@ exported 438 records
 This module includes screenshots demonstrating:
 
 - [importdata.png](screenshots/importdata.png) – JSON data import into MongoDB
-- [database_validation.png](screenshots/database_validation.png) – database and collection validation
-- [createindex.png](screenshots/createindex.png) – index creation on the `type` field
-- [analytical_queries.png](screenshots/analytical_queries.png) – aggregation and analytical queries
+- [database_validation.png](screenshots/database_validation.png) – Database and collection validation
+- [createindex.png](screenshots/createindex.png) – Index creation on the `type` field
+- [analytical_queries.png](screenshots/analytical_queries.png) – Aggregation and analytical queries
 - [exportcsv.png](screenshots/exportcsv.png) – CSV export operation
-- [electronicscsv.png](screenshots/electronicscsv.png) – exported CSV verification
+- [electronicscsv.png](screenshots/electronicscsv.png) – Exported CSV verification
 
 Screenshots are available in the screenshots/ directory.
 
@@ -135,6 +147,6 @@ Screenshots are available in the screenshots/ directory.
 - JSON catalog data successfully imported into MongoDB
 - MongoDB database and collection validated
 - Index created on the type field
-- Aggregation and analytical queries executed on semi-structured document data
+- Aggregation queries and analytical operations executed on semi-structured MongoDB data
 - Selected fields exported from MongoDB into CSV format
 
