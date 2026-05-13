@@ -130,7 +130,7 @@ IBM Cognos Analytics was used to create enterprise-style executive dashboards wi
 - Quarterly revenue analysis
 
 ### Included Files
-- [`Global_Sales_Insights_Dashboard.pdf`](cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)
+- [`Global_Sales_Insights_Dashboard.pdf`](cognos/dashboards/Global%20Sales%20Insights%20Dashboard_cognos.pdf)
 - [`cognos_relationships.png`](cognos/screenshots/cognos_relationships.png)
 - [`cognos_dashboard_overview.png`](cognos/screenshots/cognos_dashboard_overview.png)
 - [`cognos_regional_analysis.png`](cognos/screenshots/cognos_regional_analysis.png)
@@ -151,7 +151,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 - Geographic distribution analytics
 
 ### Included Files
-- [`Global_Sales_Insights_Dashboard.pdf`](looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)
+- [`Global_Sales_Insights_Dashboard.pdf`](looker_studio/dashboards/Global%20Sales%20Insights%20Dashboard_looker.pdf)
 - [`looker_blend_data.png`](looker_studio/screenshots/looker_blend_data.png)
 - [`looker_join_configuration.png`](looker_studio/screenshots/looker_join_configuration.png)
 - [`looker_dashboard_overview.png`](looker_studio/screenshots/looker_dashboard_overview.png)
@@ -163,7 +163,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 ## 📷 Dashboard Previews
 
 ### IBM Cognos Analytics – Executive Overview
-[View Dashboard PDF](cognos/dashboards/Global_Sales_Insights_Dashboard.pdf)
+**[View Cognos Dashboard PDF](cognos/dashboards/Global%20Sales%20Insights%20Dashboard_cognos.pdf)**
 
 ![Cognos Overview](cognos/screenshots/cognos_dashboard_overview.png)
 
@@ -176,7 +176,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 ---
 
 ### Google Looker Studio – Executive Overview
-[View Dashboard PDF](looker_studio/dashboards/Global_Sales_Insights_Dashboard.pdf)
+**[View Looker Studio Dashboard PDF](looker_studio/dashboards/Global%20Sales%20Insights%20Dashboard_looker.pdf)**
 
 ![Looker Overview](looker_studio/screenshots/looker_dashboard_overview.png)
 
