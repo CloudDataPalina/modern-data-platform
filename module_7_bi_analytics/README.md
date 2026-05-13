@@ -53,8 +53,10 @@ module_7_bi_analytics/
 │   │   └── Global_Sales_Insights_Dashboard.pdf → IBM Cognos dashboard export
 │   │
 │   └── screenshots/
-│       ├── cognos_relationships.png            → Cognos data model relationships
-│       └── cognos_dashboard.png                → Cognos executive dashboard
+│       ├── cognos_relationships.png            → Cognos dimensional relationship modeling
+│       ├── cognos_dashboard_overview.png       → Executive KPI dashboard overview
+│       ├── cognos_regional_analysis.png        → Regional sales and quarterly revenue analysis
+│       └── cognos_geographic_insights.png      → Geographic revenue distribution and treemap analytics
 │
 ├── looker_studio/
 │   ├── dashboards/
@@ -63,7 +65,9 @@ module_7_bi_analytics/
 │   └── screenshots/
 │       ├── looker_blend_data.png               → Looker Studio blended data configuration
 │       ├── looker_join_configuration.png       → Join and merge configuration
-│       └── looker_dashboard.png                → Looker Studio executive dashboard
+│       ├── looker_dashboard_overview.png       → Executive KPI dashboard overview
+│       ├── looker_regional_analysis.png        → Regional sales and quarterly revenue analysis
+│       └── looker_geographic_insights.png      → Geographic revenue distribution and treemap analytics
 │
 └── data_model/
     └── relationships.png                       → PostgreSQL star schema relationships
