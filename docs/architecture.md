@@ -1,124 +1,286 @@
-# Database Architecture Overview
+# Modern Data Platform Architecture Overview
 
-This document describes the overall architecture of the **DBA Capstone Project**,
-including database layers, data flow, security controls, and maintenance processes.
+This document describes the overall architecture of the **Modern Data Platform – End-to-End Data Engineering Project**, including transactional systems, analytical storage, NoSQL repositories, ETL orchestration, distributed processing, BI analytics, security, and automation workflows.
 
-## High-Level Data Architecture
+---
+
+# High-Level Data Architecture
+
+```text
+                 +----------------------+
+                 |   OLTP Database      |
+                 |      MySQL           |
+                 +----------------------+
+                            |
+                            | ETL Pipelines
+                            | Apache Airflow DAGs
+                            v
+                 +----------------------+
+                 |   Data Warehouse     |
+                 |    PostgreSQL        |
+                 +----------------------+
+                            |
+                            | Analytics / BI
+                            v
+        +---------------------------------------------+
+        | Cognos Analytics / Looker Studio Dashboards |
+        +---------------------------------------------+
+
+                            ^
+                            |
+                  Semi-Structured Data
+                            |
+                 +----------------------+
+                 |   MongoDB NoSQL      |
+                 | Document Repository  |
+                 +----------------------+
+
+                            |
+                            v
+
+                 +----------------------+
+                 |  Apache Spark        |
+                 | Distributed Processing|
+                 +----------------------+
 ```
-OLTP (MySQL)
-   |
-   |  ETL (Airflow DAGs)
-   v
-Data Warehouse (MySQL/PostgreSQL)
+
+# 1. System Overview
+
+The project simulates a modern enterprise-level data platform for an e-commerce company.
+
+The platform consists of:
+
+- OLTP transactional databases
+- Relational Data Warehouse
+- NoSQL document repository
+- ETL orchestration pipelines
+- Distributed data processing
+- BI dashboards and reporting
+- Backup and disaster recovery automation
+- Security and performance optimization layers
+
+The architecture combines both traditional Database Administration concepts and modern Data Engineering workflows.
+
+---
+
+# 2. Platform Layers
+
+## 2.1 OLTP Layer (MySQL)
+
+### Purpose
+Store high-frequency transactional business data.
+
+### Characteristics
+- Normalized relational schema
+- High write throughput
+- Primary and foreign keys
+- Index-based optimization
+- Transactional consistency
+
+### Responsibilities
+- Sales transaction storage
+- Customer and product operations
+- Source system for ETL pipelines
+
+---
+
+## 2.2 Data Warehouse Layer (PostgreSQL)
+
+### Purpose
+Support analytical reporting and business intelligence workloads.
+
+### Architecture
+- Star schema design
+- Fact and dimension modeling
+- Aggregation-focused queries
+- Reporting optimization
+
+### Core Components
+- Fact tables
+- Dimension tables
+- Analytical SQL queries
+- Materialized reporting structures
+
+---
+
+## 2.3 NoSQL Repository (MongoDB)
+
+### Purpose
+Store and process semi-structured JSON document data.
+
+### Features
+- Flexible schema design
+- JSON document storage
+- Aggregation pipelines
+- Index optimization
+- CSV export workflows
+
+### Use Cases
+- Product catalogs
+- Semi-structured business data
+- Fast document retrieval
+- Aggregation analytics
+
+---
+
+## 2.4 ETL & Workflow Orchestration (Apache Airflow)
+
+### Purpose
+Automate data movement and transformation processes across the platform.
+
+### ETL Workflow
+1. Extract transactional data
+2. Transform and clean datasets
+3. Load data into analytical layers
+4. Execute scheduled workflows
+
+### Features
+- DAG-based orchestration
+- Automated scheduling
+- Repeatable workflows
+- Dependency management
+- Reliable pipeline execution
+
+---
+
+## 2.5 Big Data Processing Layer (Apache Spark)
+
+### Purpose
+Enable scalable distributed data processing.
+
+### Capabilities
+- Distributed analytics
+- Parallel computation
+- Large-scale data transformation
+- Batch processing workflows
+
+### Integration
+Spark processes data generated across multiple platform layers.
+
+---
+
+## 2.6 BI Analytics & Reporting Layer
+
+### Tools
+- IBM Cognos Analytics
+- Google Looker Studio
+
+### Features
+- Executive dashboards
+- Revenue analytics
+- Geographic reporting
+- KPI visualization
+- Interactive business insights
+
+---
+
+# 3. Data Flow
+
+## Transaction Processing Flow
+
+```text
+Users / Applications
+        ↓
+OLTP Database (MySQL)
+        ↓
+Apache Airflow ETL Pipelines
+        ↓
+PostgreSQL Data Warehouse
+        ↓
+BI Dashboards & Reporting
 ```
----
 
-## 1. System Overview
+## Semi-Structured Data Flow
 
-The project simulates a real-world data platform consisting of:
-
-- OLTP database for transactional data
-- Data Warehouse for analytics
-- ETL pipelines for data movement
-- Backup and recovery mechanisms
-- Security and access control policies
-
-All components are implemented using **MySQL** and supporting tools.
-
----
-
-## 2. Database Layers
-
-### 2.1 OLTP Layer
-- Purpose: Store transactional sales data
-- Database: `sales`
-- Tables:
-  - `FactSales`
-  - `DimDate`
-  - `DimCountry`
-  - `DimCategory`
-- Characteristics:
-  - Normalized schema
-  - High write frequency
-  - Primary keys and indexes
+```text
+JSON Documents
+        ↓
+MongoDB Repository
+        ↓
+Aggregation & Export
+        ↓
+Spark / BI Analytics
+```
 
 ---
 
-### 2.2 Data Warehouse Layer
-- Purpose: Analytical reporting and aggregation
-- Schema type: Star schema
-- Fact table:
-  - `FactSales`
-- Dimension tables:
-  - `DimDate`
-  - `DimCountry`
-  - `DimCategory`
-- Used for analytical queries and reporting
+# 4. Backup and Recovery
+
+## Backup Strategy
+- Database exports using `mysqldump`
+- Automated Bash backup scripts
+- Timestamped backup generation
+- Compressed archive storage
+
+## Automation
+- CRON-based scheduling
+- Automated backup execution
+- Recovery validation testing
+
+## Recovery Scenarios
+- Database restoration
+- Table-level recovery
+- Disaster recovery simulations
+- Data loss validation exercises
 
 ---
 
-## 3. Data Integration (ETL)
+# 5. Security and Access Control
 
-- Source: OLTP database
-- Target: Data Warehouse
-- Tool: Apache Airflow
-- ETL process:
-  1. Extract data from OLTP tables
-  2. Transform data (cleansing and formatting)
-  3. Load data into warehouse tables
-- Scheduling:
-  - DAG-based orchestration
-  - Automated execution
+## 5.1 User Roles
 
-This approach ensures repeatable, reliable, and automated data movement between systems.
+|  Role           | Permissions                |
+|---------------- |----------------------------|
+| `db_admin`      | Full administrative access |
+| `db_analyst`    | Analytical query access    |
+| `db_reporter`   | Read-only reporting access |
+| `db_external`   | Restricted data access     |
 
 ---
 
-## 4. Backup and Recovery
+## 5.2 Data Protection
 
-- Backup strategy:
-  - Manual backups using `mysqldump`
-  - Automated backups using Bash scripts
-- Automation:
-  - CRON-based scheduling
-  - Timestamped and compressed backups
-- Recovery:
-  - Restore tables and databases from backups
-  - Data loss simulation and recovery validation
+### Security Features
+- AES encryption for sensitive columns
+- Role-based access control (RBAC)
+- Restricted analytical permissions
+- Controlled decryption workflows
 
----
-
-## 5. Security and Access Control
-
-### 5.1 User Roles
-- `db_admin`: Full administrative privileges
-- `db_analyst`: Read access with analytical capabilities
-- `db_reporter`: Read-only access
-- `db_external`: Restricted column-level access
-
-### 5.2 Data Protection
-- Sensitive column (`amount`) encrypted using AES encryption
-- Encrypted data stored as binary values
-- Decryption performed only with valid encryption keys
+### Performance Security
+- Indexed access paths
+- Optimized query execution
+- Controlled resource utilization
 
 ---
 
-## 6. Performance Optimization
+# 6. Performance Optimization
 
-- Indexes created to improve query performance
-- Query execution analyzed using `EXPLAIN`
-- Column data types optimized to reduce memory usage
-- Table optimization executed using `OPTIMIZE TABLE`
+## Optimization Techniques
+- SQL indexing strategies
+- Query execution analysis using `EXPLAIN`
+- Table optimization procedures
+- Data type tuning
+- Memory usage optimization
+
+## Administrative Operations
+- Index management
+- Query tuning
+- Performance monitoring
+- Table maintenance operations
 
 ---
 
-## 7. Summary
+# 7. Project Architecture Summary
 
-This architecture demonstrates a complete database lifecycle:
-- Transaction processing
-- Analytical data modeling
-- Automated ETL pipelines
+This platform demonstrates a complete modern Data Engineering and Database Administration lifecycle:
+
+- Transactional database design
+- Data Warehouse modeling
+- ETL pipeline orchestration
+- NoSQL document processing
+- Distributed data analytics
+- Business Intelligence reporting
 - Backup and disaster recovery
 - Security and performance optimization
 
-The project reflects practical Database Administration and Data Engineering concepts.
+The platform reflects real-world enterprise concepts used in modern hybrid data architectures, cloud-oriented Data Engineering environments, and scalable analytics ecosystems.
