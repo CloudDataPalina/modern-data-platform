@@ -151,7 +151,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 - Geographic distribution analytics
 
 ### Included Files
-- [`Global_Sales_Insights_Dashboard.pdf`](looker_studio/dashboards/Global%20Sales%20Insights%20Dashboard_looker.pdf)
+- [`Global_Sales_Insights_Dashboard.pdf`](looker_studio/dashboards/Global_Sales_Insights_Dashboard_google.pdf)
 - [`looker_blend_data.png`](looker_studio/screenshots/looker_blend_data.png)
 - [`looker_join_configuration.png`](looker_studio/screenshots/looker_join_configuration.png)
 - [`looker_dashboard_overview.png`](looker_studio/screenshots/looker_dashboard_overview.png)
@@ -176,7 +176,7 @@ Google Looker Studio was used to build cloud-based interactive dashboards using 
 ---
 
 ### Google Looker Studio – Executive Overview
-**[View Looker Studio Dashboard PDF](looker_studio/dashboards/Global%20Sales%20Insights%20Dashboard_looker.pdf)**
+**[View Looker Studio Dashboard PDF](looker_studio/dashboards/Global_Sales_Insights_Dashboard_google.pdf)**
 
 ![Looker Overview](looker_studio/screenshots/looker_dashboard_overview.png)
 
