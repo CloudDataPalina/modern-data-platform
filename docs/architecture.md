@@ -19,12 +19,21 @@ This document describes the overall architecture of the **Modern Data Platform â
                  |   Data Warehouse     |
                  |    PostgreSQL        |
                  +----------------------+
-                            |
-                            | Analytics / BI
-                            v
-        +---------------------------------------------+
-        | Cognos Analytics / Looker Studio Dashboards |
-        +---------------------------------------------+
+                    |              |
+                    |              |
+          Analytics / BI       Distributed Processing
+                    |              |
+                    v              v
+
+ +---------------------------------------------+
+ | Cognos Analytics / Looker Studio Dashboards |
+ +---------------------------------------------+
+
+                 +----------------------+
+                 |     Apache Spark     |
+                 | Distributed Analytics|
+                 | & SparkML Workflows  |
+                 +----------------------+
 
                             ^
                             |
@@ -33,14 +42,6 @@ This document describes the overall architecture of the **Modern Data Platform â
                  +----------------------+
                  |   MongoDB NoSQL      |
                  | Document Repository  |
-                 +----------------------+
-
-                            |
-                            v
-
-                 +----------------------+
-                 |  Apache Spark        |
-                 | Distributed Processing|
                  +----------------------+
 ```
 
@@ -149,13 +150,16 @@ Automate data movement and transformation processes across the platform.
 Enable scalable distributed data processing.
 
 ### Capabilities
-- Distributed analytics
+- Distributed analytical processing
 - Parallel computation
 - Large-scale data transformation
 - Batch processing workflows
+- SparkML model training and inference
+- Distributed predictive analytics
+- Machine Learning workflow execution
 
 ### Integration
-Spark processes data generated across multiple platform layers.
+Spark integrates with analytical and semi-structured data layers to execute distributed analytics, feature engineering, and Machine Learning inference workflows.
 
 ---
 
@@ -169,8 +173,11 @@ Spark processes data generated across multiple platform layers.
 - Executive dashboards
 - Revenue analytics
 - Geographic reporting
-- KPI visualization
+- Interactive KPI visualization
 - Interactive business insights
+- Cross-platform dashboard development
+- Executive KPI reporting
+- Dimensional analytics visualization
 
 ---
 
@@ -278,9 +285,9 @@ This platform demonstrates a complete modern Data Engineering and Database Admin
 - Data Warehouse modeling
 - ETL pipeline orchestration
 - NoSQL document processing
-- Distributed data analytics
+- Distributed Big Data analytics and SparkML workflows
 - Business Intelligence reporting
 - Backup and disaster recovery
 - Security and performance optimization
 
-The platform reflects real-world enterprise concepts used in modern hybrid data architectures, cloud-oriented Data Engineering environments, and scalable analytics ecosystems.
+The platform reflects real-world enterprise concepts used in modern hybrid data architectures, cloud-oriented Data Engineering environments, scalable analytics ecosystems, and distributed Machine Learning workflows.
