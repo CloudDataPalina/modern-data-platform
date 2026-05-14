@@ -8,6 +8,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green?logo=mongodb&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache-Spark-orange?logo=apachespark&logoColor=white)
+![IBM Cognos Analytics](https://img.shields.io/badge/IBM-Cognos_Analytics-blue?logo=ibm&logoColor=white)
 ![Looker Studio](https://img.shields.io/badge/Google-Looker_Studio-orange?logo=googleanalytics&logoColor=white)
 
 
@@ -33,7 +34,10 @@ Your responsibilities include:
 - Implementing backup and recovery strategies
 - Managing database security and access control
 - Optimizing query performance and memory usage
-
+- Building Business Intelligence dashboards and analytical reporting solutions
+- Processing large-scale datasets using distributed Spark workflows
+- Deploying Machine Learning inference and forecasting pipelines
+  
 ---
 
 ## 🧠 Project Architecture
@@ -43,7 +47,7 @@ The platform follows a modern multi-layer data platform architecture
 - **Data Warehouse**: PostgreSQL
 - **NoSQL Repository**: MongoDB
 - **ETL & Orchestration**: Apache Airflow
-- **Big Data Processing**: Apache Spark
+- **Big Data & ML Processing**: Apache Spark
 - **BI & Reporting**: Cognos Analytics / Looker Studio
 - **Automation & Scripting**: Bash, Python 
 
@@ -62,7 +66,7 @@ modern-data-platform/
 ├── module_5_backup_restore/             → Database backup, restore, automation, and disaster recovery
 ├── module_6_security_optimization/      → Query optimization, access control, encryption, and performance tuning
 ├── module_7_bi_analytics/               → Business Intelligence dashboards and analytical reporting
-├── module_8_big_data_spark/             → Distributed data processing and Spark analytics
+├── module_8_big_data_spark/             → Distributed data processing, Spark analytics, and ML inference
 └── docs/
     └── architecture.md                  → High-level system and data architecture documentation
 
@@ -78,7 +82,7 @@ modern-data-platform/
 - **phpMyAdmin / pgAdmin** – Database administration  
 - **Cloud IDE** – Development and testing environment  
 - **MongoDB** – NoSQL document database
-- **Apache Spark** – Distributed data processing
+- **Apache Spark** – Distributed data processing and SparkML workflows
 - **IBM Cognos Analytics** – Business Intelligence dashboards
 - **Google Looker Studio** – Data visualization & reporting
   
@@ -133,13 +137,21 @@ modern-data-platform/
 
 ---
 
-### [Module 7 – BI Analytics](module_7_bi_analytics/)
-- Coming soon
+### [Module 7 – BI Analytics & Executive Dashboards](module_7_bi_analytics/)
+- Developed executive Business Intelligence dashboards using IBM Cognos Analytics and Google Looker Studio
+- Implemented dimensional modeling and star schema analytics
+- Created KPI reporting, regional sales analysis, and geographic visualizations
+- Built cross-platform analytical dashboards and reporting workflows
+- Integrated PostgreSQL Data Warehouse with enterprise BI platforms
 
 ---
 
-### [Module 8 – Big Data Processing with Spark](module_8_big_data_spark/)
-- Coming soon
+### [Module 8 – Big Data Processing & ML Analytics with Spark](module_8_big_data_spark/)
+- Processed large-scale datasets using Apache Spark and Spark DataFrames
+- Performed distributed analytical queries and search term analytics
+- Implemented SparkML model training, persistence, and inference workflows
+- Executed distributed Machine Learning predictions and sales forecasting
+- Demonstrated scalable Big Data analytics and predictive processing pipelines
   
 ---
 
@@ -151,17 +163,23 @@ modern-data-platform/
 - Workflow orchestration with Apache Airflow
 - Backup, recovery, and security best practices
 - NoSQL document database operations
-- Data Warehouse dimensional modeling
+- Dimensional data warehouse modeling
 - BI dashboard development
-- Distributed data processing with Spark
+- Distributed data processing and SparkML workflows
 - Data platform architecture design
+- SparkML model lifecycle management
   
 ---
 
-## 📜 Certificate Program
-This project was completed as part of the:
+## 📜 Certificate Programs
 
-**IBM Data Engineer Professional Certificate**
+This project was originally developed as part of the following IBM professional certificate programs and continuously expanded into a comprehensive enterprise-style Data Engineering portfolio project:
+
+- **IBM Relational Database Administrator Professional Certificate**
+- **IBM Data Warehouse Engineer Professional Certificate**
+- **IBM Data Engineer Professional Certificate**
+- **IBM Data Architect Professional Certificate** *(in progress)*
+  
 
 ## 👩‍💻 Author
 
