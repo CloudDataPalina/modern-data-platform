@@ -5,7 +5,7 @@ This module demonstrates distributed data processing, analytical querying, and m
 
 The module focuses on analyzing web server search term data from an e-commerce platform and deploying pretrained machine learning models for predictive sales forecasting.
 
-Apache Spark was used to process structured datasets, perform analytical operations using Spark DataFrames, and execute ML prediction workflows in a distributed computing environment.
+Apache Spark was used to process structured datasets, execute distributed analytical operations using Spark DataFrames, and run ML prediction workflows in a distributed computing environment.
 
 ---
 
@@ -50,36 +50,45 @@ The pipeline included:
 ## 📁 Module Structure
 ```text
 module_8_big_data_spark/
-├── README.md                                        → Module documentation and workflow overview
+├── README.md                                          → Module documentation and workflow overview
 │
 ├── notebooks/
-│   ├── Bigdata_and_Spark_Spark_MLOps_v3.ipynb       → Spark analytics and ML workflow notebook
-│   └── Practise_Lab_Model_saving_and_loading.ipynb  → ML model loading and deployment practice
+│   ├── spark_big_data_predictive_analytics.ipynb      → Distributed analytics and sales forecasting workflow
+│   └── distributed_sparkml_model_workflow.ipynb       → SparkML training, persistence, and inference workflow
 │
-├── data/
-│   └── searchterms.csv                              → Web server search term dataset
+├── datasets/
+│   └── searchterms.csv                                → E-commerce web server search term dataset
 │
 ├── models/
-│   ├── model.tar.gz                                 → Pretrained sales prediction model archive
-│   ├── sales_prediction.model/                      → Sales forecasting model
-│   ├── babyweightprediction.model/                  → ML prediction model
-│   └── infantheight2.model/                         → ML prediction model
-│
-├── project/
-│   ├── screenshots/
-│   ├── predictions/
-│   └── scripts/
+│   ├── sales_prediction.model/                        → Pretrained sales forecasting SparkML model
+│   │   ├── data/
+│   │   └── metadata/                                  
+│   │
+│   ├── infantheight2.model/                           → Infant height-to-weight regression model
+│   │   ├── data/
+│   │   └── metadata/                                  
+│   │
+│   └── babyweightprediction.model/                    → Saved SparkML prediction model for inference workflows
+│       ├── data/
+│       └── metadata/                                  
 │
 └── screenshots/
-    ├── spark_dataframe.png                          → Spark DataFrame processing
-    ├── search_analytics.png                         → Search term analytical queries
-    ├── model_loading.png                            → ML model loading process
-    ├── spark_predictions.png                        → Distributed prediction execution
-    └── ml_forecasting.png                           → Sales forecasting results
+    ├── spark_schema.png                               → Spark DataFrame schema inference
+    ├── search_frequency_analysis.png                  → Search frequency analytical query
+    ├── top_search_terms.png                           → Top searched product terms aggregation
+    ├── sparkml_model_loading.png                      → SparkML model deployment and loading
+    ├── forecast_dataset_preparation.png               → Feature vector preparation for forecasting
+    ├── distributed_prediction_results.png             → Distributed sales forecasting predictions
+    ├── sparkml_dataset_creation.png                   → SparkML training dataset creation
+    ├── feature_vector_transformation.png              → VectorAssembler feature engineering workflow
+    ├── sparkml_model_training.png                     → Linear Regression model training process
+    └── distributed_inference_results.png              → Distributed SparkML inference results
+
 ```
 
 ## 🧠 Spark Workflow
 
+```text
 CSV Dataset
      ↓
 Spark DataFrame
@@ -93,6 +102,7 @@ Pretrained ML Model Loading
 Distributed ML Inference
      ↓
 Sales Forecasting Predictions
+```
 
 ## 📊 Search Term Analytics
 
@@ -114,8 +124,7 @@ Web server search term data was processed using Spark DataFrames to analyze sear
 
 Pretrained machine learning models were deployed and executed using Apache Spark.
 
-### The workflow included:
-- model archive extraction
+### Workflow Components
 - model loading
 - distributed prediction execution
 - future sales forecasting
@@ -147,35 +156,25 @@ The pretrained sales forecasting model was used to generate predictions for futu
 
 ---
 
-## 📸 Screenshots & Processing Views
-
-### Spark Data Processing
-- [`spark_dataframe.png`](screenshots/spark_dataframe.png) – Spark DataFrame creation and processing
-- [`search_analytics.png`](screenshots/search_analytics.png) – Search term analytical operations
-
-### Machine Learning Workflows
-- [`model_loading.png`](screenshots/model_loading.png) – ML model loading process
-- [`spark_predictions.png`](screenshots/spark_predictions.png) – Distributed Spark predictions
-- [`ml_forecasting.png`](screenshots/ml_forecasting.png) – Forecasting output and prediction results
-
----
-
 ## 📷 Workflow Preview
 
-### Spark DataFrame Processing
-![Spark DataFrame](screenshots/spark_dataframe.png)
+### Spark Schema Inference
+![Spark Schema](screenshots/spark_schema.png)
 
-### Search Term Analytics
-![Search Analytics](screenshots/search_analytics.png)
+### Search Frequency Analytics
+![Search Analytics](screenshots/search_frequency_analysis.png)
 
-### ML Model Loading
-![Model Loading](screenshots/model_loading.png)
+### Top Search Terms Aggregation
+![Top Search Terms](screenshots/top_search_terms.png)
 
-### Distributed Spark Predictions
-![Spark Predictions](screenshots/spark_predictions.png)
+### SparkML Model Loading
+![SparkML Loading](screenshots/sparkml_model_loading.png)
 
-### Sales Forecasting
-![ML Forecasting](screenshots/ml_forecasting.png)
+### Feature Engineering for Forecasting
+![Forecast Preparation](screenshots/forecast_dataset_preparation.png)
+
+### Distributed Prediction Results
+![Distributed Predictions](screenshots/distributed_prediction_results.png)
 
 ---
 
@@ -184,8 +183,8 @@ The pretrained sales forecasting model was used to generate predictions for futu
 1. Initialize Apache Spark environment
 2. Load CSV dataset into Spark DataFrame
 3. Execute analytical queries on search term data
-4. Download and extract pretrained ML models
-5. Load ML models into Spark environment
+4. Load pretrained ML models from the local repository
+5. Initialize distributed ML inference workflows
 6. Execute distributed prediction workflows
 7. Generate future sales forecasting output
 8. Validate analytical and prediction results
