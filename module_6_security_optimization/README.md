@@ -1,4 +1,4 @@
-# Module 5 – Database Optimization, Security & Access Control
+# Module 6 – Database Optimization, Security & Access Control
 
 ## 📌 Module Overview
 This module focuses on **database performance optimization, security, and access control**.
