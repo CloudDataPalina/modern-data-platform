@@ -166,6 +166,8 @@ modern-data-platform/
 - Implemented and validated bidirectional RDBMS ↔ MongoDB migration workflows
 - Produced architecture blueprints, governance documentation, and enterprise transformation artifacts
 
+---
+
 ## 🎯 Key Skills Demonstrated
 - Relational database design (OLTP & DWH)
 - SQL querying and optimization
