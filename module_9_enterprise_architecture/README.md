@@ -87,6 +87,8 @@ module_9_enterprise_architecture/
         └── 07_nosql_to_rdbms_report.png
 ```
 
+---
+
 ##🧠 Architecture Transformation
 
 FashionMart
