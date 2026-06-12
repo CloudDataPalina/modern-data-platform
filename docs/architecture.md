@@ -1,27 +1,27 @@
 # Modern Data Platform Architecture Overview
 
-This document describes the overall architecture of the **Modern Data Platform – End-to-End Data Engineering Project**, including transactional systems, analytical storage, NoSQL repositories, ETL orchestration, distributed processing, BI analytics, security, and automation workflows.
-
+This document describes the overall architecture of the **Modern Data Platform – End-to-End Data Engineering Project**, including transactional systems, analytical storage, NoSQL repositories, ETL orchestration, distributed processing, Business Intelligence, security, governance, migration strategy, and enterprise architecture components.
 ---
 
 # High-Level Data Architecture
 
 ```text
+ +-----------------------------------------------------------+
+ | Enterprise Architecture & Governance Layer                |
+ | Target-State Design | Governance | Compliance | Migration |
+ +-----------------------------------------------------------+
+
                  +----------------------+
                  |   OLTP Database      |
                  |      MySQL           |
                  +----------------------+
                             |
-                            | ETL Pipelines
-                            | Apache Airflow DAGs
                             v
                  +----------------------+
                  |   Data Warehouse     |
                  |    PostgreSQL        |
                  +----------------------+
                     |              |
-                    |              |
-          Analytics / BI       Distributed Processing
                     |              |
                     v              v
 
@@ -36,8 +36,6 @@ This document describes the overall architecture of the **Modern Data Platform �
                  +----------------------+
 
                             ^
-                            |
-                  Semi-Structured Data
                             |
                  +----------------------+
                  |   MongoDB NoSQL      |
@@ -59,8 +57,9 @@ The platform consists of:
 - BI dashboards and reporting
 - Backup and disaster recovery automation
 - Security and performance optimization layers
+- Enterprise architecture and governance framework
 
-The architecture combines both traditional Database Administration concepts and modern Data Engineering workflows.
+The architecture combines traditional Database Administration, modern Data Engineering, Business Intelligence, Big Data processing, and Enterprise Architecture practices.
 
 ---
 
@@ -181,6 +180,32 @@ Spark integrates with analytical and semi-structured data layers to execute dist
 
 ---
 
+## 2.7 Enterprise Architecture & Governance Layer
+
+### Purpose
+
+Define the future-state architecture, governance framework, and migration strategy for enterprise-scale data platforms.
+
+### Capabilities
+
+- Current-state architecture assessment
+- Target-state architecture design
+- Enterprise data modeling
+- Data governance framework development
+- Compliance and security planning
+- Data migration strategy design
+- Enterprise architecture documentation
+
+### Deliverables
+
+- Architecture assessments
+- Enterprise architecture blueprints
+- Data governance framework
+- Migration strategy documentation
+- Operational and analytical data models
+
+---
+
 # 3. Data Flow
 
 ## Transaction Processing Flow
@@ -207,6 +232,24 @@ MongoDB Repository
 Aggregation & Export
         ↓
 Spark / BI Analytics
+```
+
+## Enterprise Architecture & Migration Flow
+
+```text
+Current-State Architecture Assessment
+        ↓
+FashionMart + TrendyThreads Evaluation
+        ↓
+FutureMart Target-State Architecture Design
+        ↓
+Operational & Analytical Data Modeling
+        ↓
+Data Governance Framework
+        ↓
+RDBMS ↔ NoSQL Migration Strategy
+        ↓
+Migration Validation & Documentation
 ```
 
 ---
@@ -289,5 +332,9 @@ This platform demonstrates a complete modern Data Engineering and Database Admin
 - Business Intelligence reporting
 - Backup and disaster recovery
 - Security and performance optimization
+- Enterprise architecture assessment
+- Target-state architecture design
+- Data governance framework development
+- Data migration strategy planning
 
 The platform reflects real-world enterprise concepts used in modern hybrid data architectures, cloud-oriented Data Engineering environments, scalable analytics ecosystems, and distributed Machine Learning workflows.
