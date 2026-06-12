@@ -67,6 +67,7 @@ modern-data-platform/
 ├── module_6_security_optimization/      → Query optimization, access control, encryption, and performance tuning
 ├── module_7_bi_analytics/               → Business Intelligence dashboards and analytical reporting
 ├── module_8_big_data_spark/             → Distributed data processing, Spark analytics, and ML inference
+├── module_9_enterprise_architecture/    → Enterprise architecture, governance, and migration strategy
 └── docs/
     └── architecture.md                  → High-level system and data architecture documentation
 
@@ -155,6 +156,16 @@ modern-data-platform/
   
 ---
 
+### [Module 9 – Enterprise Data Architecture, Governance & Migration Strategy](module_9_enterprise_architecture/)
+- Assessed and documented current-state enterprise architectures of FashionMart and TrendyThreads
+- Identified architectural strengths, risks, scalability limitations, and improvement opportunities
+- Designed the FutureMart target-state enterprise data architecture following a retail company merger
+- Developed operational and analytical data models, including OLTP and Data Warehouse designs
+- Created enterprise data governance policies, compliance controls, and security frameworks
+- Defined data migration strategies between relational and NoSQL systems
+- Implemented and validated bidirectional RDBMS ↔ MongoDB migration workflows
+- Produced architecture blueprints, governance documentation, and enterprise transformation artifacts
+
 ## 🎯 Key Skills Demonstrated
 - Relational database design (OLTP & DWH)
 - SQL querying and optimization
@@ -168,6 +179,12 @@ modern-data-platform/
 - Distributed data processing and SparkML workflows
 - Data platform architecture design
 - SparkML model lifecycle management
+- Enterprise Data Architecture (EDA)
+- Current-State & Target-State Architecture Assessment
+- Data Governance & Compliance Framework Design
+- Data Migration Strategy & Planning
+- Operational and Analytical Data Modeling
+- Enterprise Architecture Documentation
   
 ---
 
@@ -178,7 +195,7 @@ This project was originally developed as part of the following IBM professional 
 - **IBM Relational Database Administrator Professional Certificate**
 - **IBM Data Warehouse Engineer Professional Certificate**
 - **IBM Data Engineer Professional Certificate**
-- **IBM Data Architect Professional Certificate** *(in progress)*
+- **IBM Data Architect Professional Certificate** 
   
 
 ## 👩‍💻 Author
