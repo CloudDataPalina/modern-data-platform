@@ -1,4 +1,4 @@
-# Module 4 – Database Backup, Restore & Automation
+# Module 5 – Database Backup, Restore & Automation
 
 ## 📌 Module Overview
 This module focuses on **database backup, restore, and automation techniques**.
