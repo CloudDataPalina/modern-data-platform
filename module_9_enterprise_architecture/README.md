@@ -209,11 +209,11 @@ The governance framework defines:
 
 ### FutureMart Enterprise Architecture Blueprint
 
-![FutureMart Enterprise Architecture Blueprint](architecture/futuremart_eda_blueprint.png)
+![FutureMart Enterprise Architecture Blueprint](future_state/FutureMart_EDA_Blueprint.png)
 
 ### FutureMart Enterprise Data Model
 
-![FutureMart Enterprise Data Model](architecture/futuremart_data_model.png)
+![FutureMart Enterprise Data Model](future_state/FutureMart_ERD.png)
 
 ---
 
