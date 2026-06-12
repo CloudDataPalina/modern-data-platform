@@ -217,7 +217,7 @@ The governance framework defines:
 
 ### FutureMart Enterprise Data Model
 
-[FutureMart OLTP Database Schema](future_state/operational_model/FutureMart_OLTP_Database_Schema.md)
+[FutureMart OLTP Database Schema](future_state/operational_model/FutureMart_ERD.png)
 
 ---
 
