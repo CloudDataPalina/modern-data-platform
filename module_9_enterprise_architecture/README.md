@@ -91,6 +91,7 @@ module_9_enterprise_architecture/
 
 ## 🧠 Architecture Transformation
 
+```
 FashionMart
         ↓
 Architecture Assessment
@@ -111,6 +112,7 @@ Governance Framework
         ↓
 
 Migration Strategy
+```
 
 ---
 
