@@ -92,26 +92,21 @@ module_9_enterprise_architecture/
 ## 🧠 Architecture Transformation
 
 ```
-FashionMart
-        ↓
-Architecture Assessment
-        ↓
-
-TrendyThreads
-        ↓
-Architecture Assessment
-        ↓
-
-Gap Analysis
-        ↓
-
+       FashionMart
+            ↓
+   Architecture Assessment
+            ↓
+      TrendyThreads
+            ↓
+   Architecture Assessment
+            ↓
+       Gap Analysis
+            ↓
 FutureMart Enterprise Architecture
-        ↓
-
-Governance Framework
-        ↓
-
-Migration Strategy
+            ↓
+    Governance Framework
+            ↓
+    Migration Strategy
 ```
 
 ---
