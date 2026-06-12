@@ -1,0 +1,117 @@
+# FutureMart OLTP Database Schema
+
+## Overview
+
+This document defines the transactional OLTP database schema designed for FutureMart’s unified retail and e-commerce platform.
+
+The schema supports customer management, product catalog management, order processing, payments, inventory tracking, and fulfillment operations.
+
+The solution was designed as part of the FutureMart target-state data architecture following the merger of FashionMart and TrendyThreads.
+
+## 1. Objective
+
+Design and implement a PostgreSQL OLTP database schema for FutureMart to support customer management, product catalog operations, order processing, payments, inventory management, and fulfillment center operations.
+
+## 2. Tables Overview
+
+- Customers: Stores customer information.
+- Orders: Stores customer purchase transactions from web, mobile app, and in-store channels.
+- OrderItems: Stores the products included in each order.
+- Products: Stores apparel product information.
+- Payments: Stores payment details for customer orders.
+- FulfillmentCenters: Stores warehouse and fulfillment center information.
+- Inventory: Tracks product stock levels across fulfillment centers.
+
+## 3. SQL: CREATE TABLE Statements
+
+```sql
+CREATE TABLE Customers (
+customer_id INT PRIMARY KEY,
+first_name VARCHAR(50),
+last_name VARCHAR(50),
+email VARCHAR(100),
+phone VARCHAR(20),
+address VARCHAR(255),
+city VARCHAR(100),
+country VARCHAR(100),
+created_at TIMESTAMP
+);
+
+CREATE TABLE Products (
+product_id INT PRIMARY KEY,
+product_name VARCHAR(100),
+category VARCHAR(50),
+brand VARCHAR(50),
+size VARCHAR(20),
+color VARCHAR(30),
+unit_price DECIMAL(10,2),
+created_at TIMESTAMP
+);
+
+CREATE TABLE FulfillmentCenters (
+fulfillment_center_id INT PRIMARY KEY,
+center_name VARCHAR(100),
+location VARCHAR(255),
+city VARCHAR(100),
+country VARCHAR(100)
+);
+
+CREATE TABLE Orders (
+order_id INT PRIMARY KEY,
+customer_id INT,
+order_date TIMESTAMP,
+purchase_mode VARCHAR(20),
+order_status VARCHAR(20),
+total_amount DECIMAL(10,2),
+FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+CREATE TABLE OrderItems (
+order_item_id INT PRIMARY KEY,
+order_id INT,
+product_id INT,
+quantity INT,
+unit_price DECIMAL(10,2),
+discount_amount DECIMAL(10,2),
+line_total DECIMAL(10,2),
+FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
+
+CREATE TABLE Payments (
+payment_id INT PRIMARY KEY,
+order_id INT,
+payment_date TIMESTAMP,
+payment_method VARCHAR(30),
+payment_status VARCHAR(20),
+amount DECIMAL(10,2),
+FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+);
+
+CREATE TABLE Inventory (
+inventory_id INT PRIMARY KEY,
+product_id INT,
+fulfillment_center_id INT,
+stock_quantity INT,
+reorder_level INT,
+last_updated TIMESTAMP,
+FOREIGN KEY (product_id) REFERENCES Products(product_id),
+FOREIGN KEY (fulfillment_center_id) REFERENCES FulfillmentCenters(fulfillment_center_id)
+);
+
+```
+
+## 4. Design Assumptions / Notes
+
+- One customer can place multiple orders.
+- Each order belongs to one customer.
+- One order can contain multiple products through the OrderItems table.
+- One product can appear in multiple order items.
+- One order can have one or more payment records.
+- Inventory is tracked separately for each product and fulfillment center.
+- Fulfillment centers can store multiple products.
+- The schema is normalized to reduce redundancy and improve transaction processing efficiency.
+- purchase_mode stores the sales channel, such as web, mobile app, or in-store.
+- DECIMAL(10,2) is used for monetary values to ensure financial accuracy.
+- Product pricing is stored in both Products and OrderItems to preserve historical pricing at the time of purchase.
+- Inventory levels are updated through order fulfillment and stock replenishment processes.
