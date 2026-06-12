@@ -89,7 +89,7 @@ module_9_enterprise_architecture/
 
 ---
 
-##🧠 Architecture Transformation
+## 🧠 Architecture Transformation
 
 FashionMart
         ↓
