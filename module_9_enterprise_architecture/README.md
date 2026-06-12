@@ -63,8 +63,13 @@ module_9_enterprise_architecture/
 ├── future_state/
 │   ├── FutureMart_Architecture_Assessment.pdf         → Enterprise architecture redesign assessment
 │   ├── FutureMart_EDA_Blueprint.png                   → Future-state enterprise architecture blueprint
-│   ├── FutureMart_ERD.png                             → FutureMart enterprise data model
-│   └── FutureMart_OLTP_Database_Schema.md            → FutureMart transactional database schema
+│   │
+│   ├── operational_model/
+│   │   ├── FutureMart_ERD.png                         → Operational enterprise data model
+│   │   └── FutureMart_OLTP_Database_Schema.md         → Transactional OLTP schema
+│   │
+│   └── analytical_model/
+│       └── FutureMart_Website_Analytics_DWH_Schema.md → Analytical star schema design
 │
 ├── governance/
 │   └── FutureMart_Data_Governance_Framework.pdf       → Enterprise governance framework
@@ -78,13 +83,13 @@ module_9_enterprise_architecture/
     │   └── mongodb_analysis_report.txt                → MongoDB migration analysis
     │
     └── screenshots/
-        ├── 01_mongodb_source_count.png
-        ├── 02_mongoimport_execution.png
-        ├── 03_mongodb_validation.png
-        ├── 04_mongodb_products_collection.png
-        ├── 05_rdbms_to_nosql_report.png
-        ├── 06_mysql_table_creation.png
-        └── 07_nosql_to_rdbms_report.png
+        ├── 01_mongodb_source_count.png                → MongoDB source collection validation
+        ├── 02_mongoimport_execution.png               → MongoDB import execution
+        ├── 03_mongodb_validation.png                  → MongoDB data validation
+        ├── 04_mongodb_products_collection.png         → MongoDB products collection
+        ├── 05_rdbms_to_nosql_report.png               → Migration validation report
+        ├── 06_mysql_table_creation.png                → MySQL target schema creation
+        └── 07_nosql_to_rdbms_report.png               → Reverse migration validation
 ```
 
 ---
