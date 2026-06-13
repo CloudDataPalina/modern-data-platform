@@ -66,11 +66,11 @@ module_9_enterprise_architecture/
 │   │
 │   ├── operational_model/
 │   │   ├── FutureMart_ERD.png                           → Operational enterprise data model
-│   │   └── FutureMart_OLTP_Database_Schema.md           → Transactional OLTP schema
+│   │   └── FutureMart_OLTP_Database_Schema.txt          → Transactional OLTP schema
 │   │
 │   └── analytical_model/
 │       ├── FutureMart_Website_Analytics_Star_Schema.png → Analytical data warehouse star schema
-│       └── FutureMart_Website_Analytics_DWH_Schema.md   → Analytical star schema design
+│       └── FutureMart_Website_Analytics_DWH_Schema.txt  → Analytical star schema design
 │
 ├── governance/
 │   └── FutureMart_Data_Governance_Framework.pdf         → Enterprise governance framework
