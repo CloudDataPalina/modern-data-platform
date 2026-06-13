@@ -55,41 +55,42 @@ module_9_enterprise_architecture/
 ├── README.md                                          → Module documentation and architecture overview
 │
 ├── current_state/
-│   ├── FashionMart_Architecture_Assessment.pdf        → Current-state architecture assessment
-│   ├── FashionMart_Architecture_Blueprint.png         → FashionMart architecture blueprint
-│   ├── TrendyThreads_Architecture_Assessment.pdf      → Current-state architecture assessment
-│   └── TrendyThreads_Architecture_Blueprint.png       → TrendyThreads architecture blueprint
+│   ├── FashionMart_Architecture_Assessment.pdf          → Current-state architecture assessment
+│   ├── FashionMart_Architecture_Blueprint.png           → FashionMart architecture blueprint
+│   ├── TrendyThreads_Architecture_Assessment.pdf        → Current-state architecture assessment
+│   └── TrendyThreads_Architecture_Blueprint.png         → TrendyThreads architecture blueprint
 │
 ├── future_state/
-│   ├── FutureMart_Architecture_Assessment.pdf         → Enterprise architecture redesign assessment
-│   ├── FutureMart_EDA_Blueprint.png                   → Future-state enterprise architecture blueprint
+│   ├── FutureMart_Architecture_Assessment.pdf           → Enterprise architecture redesign assessment
+│   ├── FutureMart_EDA_Blueprint.png                     → Future-state enterprise architecture blueprint
 │   │
 │   ├── operational_model/
-│   │   ├── FutureMart_ERD.png                         → Operational enterprise data model
-│   │   └── FutureMart_OLTP_Database_Schema.md         → Transactional OLTP schema
+│   │   ├── FutureMart_ERD.png                           → Operational enterprise data model
+│   │   └── FutureMart_OLTP_Database_Schema.md           → Transactional OLTP schema
 │   │
 │   └── analytical_model/
-│       └── FutureMart_Website_Analytics_DWH_Schema.md → Analytical star schema design
+│       ├── FutureMart_Website_Analytics_Star_Schema.png → Analytical data warehouse star schema
+│       └── FutureMart_Website_Analytics_DWH_Schema.md   → Analytical star schema design
 │
 ├── governance/
-│   └── FutureMart_Data_Governance_Framework.pdf       → Enterprise governance framework
+│   └── FutureMart_Data_Governance_Framework.pdf         → Enterprise governance framework
 │
 └── migration/
     ├── scripts/
-    │   ├── rdbms2nosql.txt                            → Relational-to-NoSQL migration
-    │   └── nosql2rdbms.txt                            → NoSQL-to-relational migration
+    │   ├── rdbms2nosql.txt                              → Relational-to-NoSQL migration
+    │   └── nosql2rdbms.txt                              → NoSQL-to-relational migration
     │
     ├── reports/
-    │   └── mongodb_analysis_report.txt                → MongoDB migration analysis
+    │   └── mongodb_analysis_report.txt                  → MongoDB migration analysis
     │
     └── screenshots/
-        ├── 01_mongodb_source_count.png                → MongoDB source collection validation
-        ├── 02_mongoimport_execution.png               → MongoDB import execution
-        ├── 03_mongodb_validation.png                  → MongoDB data validation
-        ├── 04_mongodb_products_collection.png         → MongoDB products collection
-        ├── 05_rdbms_to_nosql_report.png               → Migration validation report
-        ├── 06_mysql_table_creation.png                → MySQL target schema creation
-        └── 07_nosql_to_rdbms_report.png               → Reverse migration validation
+        ├── 01_mongodb_source_count.png                  → MongoDB source collection validation
+        ├── 02_mongoimport_execution.png                 → MongoDB import execution
+        ├── 03_mongodb_validation.png                    → MongoDB data validation
+        ├── 04_mongodb_products_collection.png           → MongoDB products collection
+        ├── 05_rdbms_to_nosql_report.png                 → Migration validation report
+        ├── 06_mysql_table_creation.png                  → MySQL target schema creation
+        └── 07_nosql_to_rdbms_report.png                 → Reverse migration validation
 ```
 
 ---
@@ -200,12 +201,6 @@ The governance framework defines:
 - Access management
 - Retention policies
 - Governance KPIs
-
-### Supported Standards
-
-- GDPR
-- PCI DSS
-- CCPA
 
 ---
 
