@@ -211,13 +211,14 @@ The governance framework defines:
 
 ## 📷 Architecture Artifacts
 
+### FutureMart Operational Data Model
+![FutureMart OLTP Model](future_state/operational_model/FutureMart_ERD.png)
+
+### FutureMart Analytical Data Model
+![FutureMart Star Schema](future_state/analytical_model/FutureMart_Website_Analytics_Star_Schema.png)
+
 ### FutureMart Enterprise Architecture Blueprint
-
-![FutureMart Enterprise Architecture Blueprint](future_state/FutureMart_EDA_Blueprint.png)
-
-### FutureMart Enterprise Data Model
-
-![FutureMart OLTP Database Schema](future_state/operational_model/FutureMart_ERD.png)
+![FutureMart Blueprint](future_state/FutureMart_EDA_Blueprint.png)
 
 ---
 
