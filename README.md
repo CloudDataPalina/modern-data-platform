@@ -203,5 +203,5 @@ This project was originally developed as part of the following IBM professional 
 ## 👩‍💻 Author
 
 **Palina Krasiuk**  
-Aspiring Cloud Data Engineer | ex-Senior Accountant  
+Junior Data Engineer | ex-Senior Accountant  
 [LinkedIn](https://www.linkedin.com/in/palina-krasiuk-954404372/) • [GitHub Portfolio](https://github.com/CloudDataPalina)
